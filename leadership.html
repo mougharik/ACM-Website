@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ACM at FSU</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400|Montserrat:600,700">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+
+<body>
+    <!-- wrapper class around navigation bar and introductory content -->
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="menu_icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                
+                <div class="logo">
+                    <img id="size" src="../img/acmlogo.png">
+                </div>
+                
+                <div class="menu_options">
+                    <ul>
+                        <li id="home"><a href="./index.html">Home</a></li>    
+                        <li id="about"><a href="./about.html">About</a></li>
+                        <li id="events"><a href="./events.html">Events</a></li>
+                        <li id="leadership"><a href="./leadership.html">Leadership</a></li>
+                        <li id="contact"><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+            
+        <div class="content">
+        </div>
+    </div>
+
+    <!-- drop down menu when screensize becomes too small-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".menu_icon").on("click", function() {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        $(window).on("scroll", function() {
+            if($(window).scrollTop() > 20) {
+                $('nav').addClass('shrink');
+            }
+
+            else {
+                $('nav').removeClass('shrink');
+            }
+        });
+    </script>
+   
+    <!-- adds a class called 'current' that is stylized in css file to underline current page -->
+    <script type="text/javascript">
+    $(function() 
+    {
+        $('a').each(function() 
+        {
+            if ($(this).prop('href') == window.location.href)
+            {
+               $(this).addClass('current');
+            }
+        });
+    });  
+    </script>
+
+</body>
+
+<!-- beginning of footer --> 
+<footer>
+    <div class="flexwrap">
+        <span id="mail">
+            <i id="email" class="fas fa-envelope fa-lg">
+                <small>hello@acmatfsu.org</small>
+            </i><br>
+            <i id="map" class="fas fa-map fa-lg">
+                <small>1017 Academic Way</small><br><small id="location">Tallahassee, FL</small>
+            </i> 
+        </span>
+        
+        <span id="copyright">
+            <p>Copyright © 2018-Present ACM at FSU</p>
+        </span>
+        
+        <span id="social">
+            <a href="https://www.facebook.com/ACMatFSU/">
+                <i class="fab fa-facebook-square fa-lg"></i></a><small>facebook</small>
+                <br>
+            <a href="https://www.github.com/FSU-ACM/">
+                <i class="fab fa-github fa-lg"></i></a><small>github</small>
+                <br>
+            <a href="https://acmatfsu.slack.com/">
+                <i class="fab fa-slack fa-lg"></i></a><small>slack</small>
+                <br>
+            <a href="https://instagram.com/">
+                <i class="fab fa-instagram fa-lg"></i></a><small>instagram</small>
+                <br>
+        </span>
+    </div>
+</footer>
+</html>
