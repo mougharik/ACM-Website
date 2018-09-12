@@ -289,7 +289,13 @@ footer {
     nav ul {
         max-height: 0;
     }
- 
+
+    .menu_options {
+        position: relative;
+        top: 5.144em;
+        transition: all 0.38s ease-out;
+    }
+
     .shrink,
     .shrink > .logo > img#size,
     .shrink > .menu_icon,
@@ -312,15 +318,20 @@ footer {
         top: .8em;
     }
 
+    .shrink > .menu_options {
+        position: relative;
+        top: 3.5em;
+    
+    }
     .shrink > .menu_options > .showing {
-        top: 4.98em;
+        top: auto;
     }
 
     .showing {
         background: #782f40;
         max-height: 100vh;
         position: relative;
-        top: 5.14em;
+        top: auto;
         border-top: 2px solid white;
         transition: all .38s ease-in;
     }
